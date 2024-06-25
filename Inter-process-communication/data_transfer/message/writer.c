@@ -53,7 +53,10 @@ int main(){
         if (strcmp(msg.mtext, "exit") == 0){
             running = 0;
         }
-        msg.mtype = 1;
+
+        // sending message
+        // it will tell the type of message and reciver end can recive the message accordingly
+        msg.mtype = 2;
         if (msgsnd(msg_id, &msg, MAX_MSG_SIZE, 0) == -1){
             report_and_exit("msgsnd failed");
         }       

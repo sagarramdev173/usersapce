@@ -39,7 +39,9 @@ int main(){
     // receiving messages
     while(running){
         message msg;
-        if (msgrcv(msg_id, &msg, MAX_MSG_SIZE, 0, 0) == -1){
+
+        // we are reciving message of type 2
+        if (msgrcv(msg_id, &msg, MAX_MSG_SIZE, 2, 0) == -1){
             report_and_exit("msgrcv failed");
         }
 
