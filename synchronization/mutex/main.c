@@ -13,7 +13,7 @@ void report_and_exit(const char *msg) {
     exit(1);
 }
 
-void *increment() {    
+void * increment() {    
     printf("Incrementing counter...\n");
     int i;
     pthread_mutex_lock(&mutex_lock);
@@ -24,7 +24,7 @@ void *increment() {
     pthread_exit(NULL);
 }
 
-void *decrement() {
+void * decrement() {
     printf("Decrementing counter...\n");
     pthread_mutex_lock(&mutex_lock);
     int i;

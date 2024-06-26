@@ -10,7 +10,7 @@ void report_and_exit(const char *msg) {
     exit(1);
 }
 
-void *increment() {    
+void * increment() {    
     printf("Incrementing counter...\n");
     int i;
     for (i = 0; i < 10000; ++i) {
@@ -19,7 +19,7 @@ void *increment() {
     pthread_exit(NULL);
 }
 
-void *decrement() {
+void * decrement() {
     printf("Decrementing counter...\n");
     int i;
     for (i = 0; i < 10000; ++i) {
