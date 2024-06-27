@@ -8,7 +8,7 @@ EXE := $(SRC:.c=)
 CC := gcc
 
 # Compiler flags
-CFLAGS := -Wall -Wextra -Werror -lrt
+CFLAGS := -Wall -Wextra -Werror -lpthread
 
 # Default target: build all executables
 all: $(EXE)
